@@ -1,0 +1,635 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="www.commice.com"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+    
+    
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    
+
+  <uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    
+   
+     <uses-permission android:name="com.android.launer.permission.INSTALL_SHORTCUT" />	
+        <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/> 
+      <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> 
+      
+
+      
+
+    <application
+      android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+      
+        
+               <activity
+            android:name=".StartUp"
+            android:theme="@style/AppTrans"
+                          >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+               
+
+    
+    <!-- the login with a service -->
+		<service android:name="www.commice.com.services.IMService"></service>
+		<activity android:name=".Login">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"></action>
+				<category android:name="android.intent.category.NORMAL">
+				</category>
+			</intent-filter>
+		</activity>
+		
+			
+		<activity android:name=".MainActivity">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"></action>
+				<category
+					android:name="android.intent.category.NORMAL">
+				</category>
+			</intent-filter>
+		</activity>
+		
+		
+		
+		
+		
+		
+		
+		
+		<activity android:name=".Messaging">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"></action>
+				<category
+					android:name="android.intent.category.NORMAL">
+				</category>
+			</intent-filter>
+		</activity>
+		
+		
+	<activity android:name=".SignUp"><intent-filter><action android:name="android.intent.action.MAIN"></action>
+<category android:name="android.intent.category.NORMAL"></category>
+</intent-filter>
+</activity>
+
+<activity android:name=".AddFriend"><intent-filter><action android:name="android.intent.action.MAIN"></action>
+<category android:name="android.intent.category.NORMAL"></category>
+</intent-filter>
+</activity>
+
+<activity android:name=".UnApprovedFriendList"><intent-filter><action android:name="android.intent.action.MAIN"></action>
+<category android:name="android.intent.category.NORMAL"></category>
+</intent-filter>
+</activity>
+<!-- others  -->
+
+<activity android:name=".SendEmail">
+			<intent-filter>
+			
+			    	<action android:name="android.intent.action.MAIN"></action>
+				<category
+					android:name="android.intent.category.NORMAL">
+				</category>
+			</intent-filter>
+		</activity>
+		
+
+
+<!-- tab bar -->
+
+		<activity android:name=".TabBar"
+		                android:label="@string/app_name" >
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"></action>
+				<category
+					android:name="android.intent.category.NORMAL">
+				</category>
+			</intent-filter>
+		</activity>
+		
+		
+		       
+		        <activity android:name=".Accounts_List">
+			<intent-filter>
+			
+			    	<action android:name="android.intent.action.MAIN"></action>
+				<category
+					android:name="android.intent.category.NORMAL">
+				</category>
+			</intent-filter>
+		</activity>
+		
+		
+               
+		        <activity android:name=".CheckInActivity">
+			<intent-filter>
+			
+			    	<action android:name="android.intent.action.MAIN"></action>
+				<category
+					android:name="android.intent.category.NORMAL">
+				</category>
+			</intent-filter>
+		</activity>
+		
+                        
+                <activity android:name=".ConfirmAccount">
+			<intent-filter>
+			
+			    	<action android:name="android.intent.action.MAIN"></action>
+				<category
+					android:name="android.intent.category.NORMAL">
+				</category>
+			</intent-filter>
+		</activity>
+		
+                               
+		<!-- friend list of your friend -->
+		    <activity android:name=".Friend_Accounts_List">
+			<intent-filter>
+			
+			    	<action android:name="android.intent.action.MAIN"></action>
+				<category
+					android:name="android.intent.category.NORMAL">
+				</category>
+			</intent-filter>
+		</activity>
+               <!-- the tab manifest  -->
+
+    <activity android:name=".FriendList">
+			<intent-filter>
+			
+			    	<action android:name="android.intent.action.MAIN"></action>
+				<category
+					android:name="android.intent.category.NORMAL">
+				</category>
+			</intent-filter>
+		</activity>
+<!-- sub from the add friend -->
+
+    <activity android:name=".AddFriendByUsername">
+			<intent-filter>
+			
+			    	<action android:name="android.intent.action.MAIN"></action>
+				<category
+					android:name="android.intent.category.NORMAL">
+				</category>
+			</intent-filter>
+		</activity>
+	
+    
+    <activity android:name=".AddFriendByEmail">
+			<intent-filter>
+			
+			    	<action android:name="android.intent.action.MAIN"></action>
+				<category
+					android:name="android.intent.category.NORMAL">
+				</category>
+			</intent-filter>
+		</activity>
+    
+    
+    <activity android:name=".AddFriendByShake">
+			<intent-filter>
+			
+			    	<action android:name="android.intent.action.MAIN"></action>
+				<category
+					android:name="android.intent.category.NORMAL">
+				</category>
+			</intent-filter>
+		</activity>
+		
+        
+    <activity android:name=".AddFriendByContact">
+			<intent-filter>
+			
+			    	<action android:name="android.intent.action.MAIN"></action>
+				<category
+					android:name="android.intent.category.NORMAL">
+				</category>
+			</intent-filter>
+		</activity>
+    
+    
+    
+    
+    <!-- end of add friend -->
+    <activity android:name=".ContentRenderer">
+			<intent-filter>
+			
+			    	<action android:name="android.intent.action.MAIN"></action>
+				<category
+					android:name="android.intent.category.NORMAL">
+				</category>
+			</intent-filter>
+		</activity>
+	
+       <activity android:name=".BroadcastOptions">
+			<intent-filter>
+			
+			    	<action android:name="android.intent.action.MAIN"></action>
+				<category
+					android:name="android.intent.category.NORMAL">
+				</category>
+			</intent-filter>
+		</activity>
+	
+          <activity android:name=".JobForm">
+			<intent-filter>
+			
+			    	<action android:name="android.intent.action.MAIN"></action>
+				<category
+					android:name="android.intent.category.NORMAL">
+				</category>
+			</intent-filter>
+		</activity>
+
+          	
+          <activity android:name=".PostJobTerm">
+			<intent-filter>
+			
+			    	<action android:name="android.intent.action.MAIN"></action>
+				<category
+					android:name="android.intent.category.NORMAL">
+				</category>
+			</intent-filter>
+		</activity>
+
+          
+        
+                <activity android:name=".ServiceForm">
+			<intent-filter>
+			
+			    	<action android:name="android.intent.action.MAIN"></action>
+				<category
+					android:name="android.intent.category.NORMAL">
+				</category>
+			</intent-filter>
+		</activity>
+		        
+                           <activity android:name=".ServiceForm_Active_Life">
+			<intent-filter>
+			
+			    	<action android:name="android.intent.action.MAIN"></action>
+				<category
+					android:name="android.intent.category.NORMAL">
+				</category>
+			</intent-filter>
+		</activity>
+		        
+       	
+          	
+        <activity android:name=".Goods">
+			<intent-filter>
+			
+			    	<action android:name="android.intent.action.MAIN"></action>
+				<category
+					android:name="android.intent.category.NORMAL">
+				</category>
+			</intent-filter>
+		</activity>
+		
+        
+        <activity android:name=".Goods_MobileDevices">
+			<intent-filter>
+			
+			    	<action android:name="android.intent.action.MAIN"></action>
+				<category
+					android:name="android.intent.category.NORMAL">
+				</category>
+			</intent-filter>
+		</activity>
+
+                <activity android:name=".AboutUs">
+			<intent-filter>
+			
+			    	<action android:name="android.intent.action.MAIN"></action>
+				<category
+					android:name="android.intent.category.NORMAL">
+				</category>
+			</intent-filter>
+		</activity>
+		
+                
+                
+                            <activity android:name=".Tour">
+			<intent-filter>
+			
+			    	<action android:name="android.intent.action.MAIN"></action>
+				<category
+					android:name="android.intent.category.NORMAL">
+				</category>
+			</intent-filter>
+		</activity>
+		   
+		
+                <activity android:name=".Jobs_List_Recent">
+			<intent-filter>
+			
+			    	<action android:name="android.intent.action.MAIN"></action>
+				<category
+					android:name="android.intent.category.NORMAL">
+				</category>
+			</intent-filter>
+		</activity>
+		
+		
+                <activity android:name=".Jobs_List">
+			<intent-filter>
+			
+			    	<action android:name="android.intent.action.MAIN"></action>
+				<category
+					android:name="android.intent.category.NORMAL">
+				</category>
+			</intent-filter>
+		</activity>
+		
+                
+			<activity android:name=".Job_Description">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"></action>
+				<category
+					android:name="android.intent.category.NORMAL">
+				</category>
+			</intent-filter>
+			</activity>
+
+			
+			<activity android:name=".Services_List">
+			<intent-filter>
+			
+			    	<action android:name="android.intent.action.MAIN"></action>
+				<category
+					android:name="android.intent.category.NORMAL">
+				</category>
+			</intent-filter>
+		</activity>
+		
+                        
+        
+		
+                        
+        
+                
+                
+                
+                
+                
+        
+        
+        
+        <!-- end of tht tab -->
+
+<!-- other account -->
+                <activity android:name=".FriendAccount">
+			<intent-filter>
+			
+			    	<action android:name="android.intent.action.MAIN"></action>
+				<category
+					android:name="android.intent.category.NORMAL">
+				</category>
+			</intent-filter>
+		</activity>
+    		
+
+<!-- profile -->
+
+                <activity android:name=".MyAccount">
+			<intent-filter>
+			
+			    	<action android:name="android.intent.action.MAIN"></action>
+				<category
+					android:name="android.intent.category.NORMAL">
+				</category>
+			</intent-filter>
+		</activity>
+
+                                <activity android:name=".EditMyAccount">
+			<intent-filter>
+			
+			    	<action android:name="android.intent.action.MAIN"></action>
+				<category
+					android:name="android.intent.category.NORMAL">
+				</category>
+			</intent-filter>
+		</activity>
+
+                                <!-- the edit profile stuff -->
+                                
+                                <activity android:name=".Update_Status">
+			<intent-filter>
+			
+			    	<action android:name="android.intent.action.MAIN"></action>
+				<category
+					android:name="android.intent.category.NORMAL">
+				</category>
+			</intent-filter>
+		</activity>
+                   
+                                
+                                <activity android:name=".Update_Fullname">
+			<intent-filter>
+			
+			    	<action android:name="android.intent.action.MAIN"></action>
+				<category
+					android:name="android.intent.category.NORMAL">
+				</category>
+			</intent-filter>
+		</activity>
+		
+                                
+                                <activity android:name=".Update_Gender">
+			<intent-filter>
+			
+			    	<action android:name="android.intent.action.MAIN"></action>
+				<category
+					android:name="android.intent.category.NORMAL">
+				</category>
+			</intent-filter>
+		
+		</activity>
+		
+                                
+                                <activity android:name=".Update_Age">
+			<intent-filter>
+			
+			    	<action android:name="android.intent.action.MAIN"></action>
+				<category
+					android:name="android.intent.category.NORMAL">
+				</category>
+			</intent-filter>
+		</activity>
+		
+                                
+                                <activity android:name=".Update_Hobbies">
+			<intent-filter>
+			
+			    	<action android:name="android.intent.action.MAIN"></action>
+				<category
+					android:name="android.intent.category.NORMAL">
+				</category>
+			</intent-filter>
+		</activity>
+		
+                                
+                                <activity android:name=".Update_Address">
+			<intent-filter>
+			
+			    	<action android:name="android.intent.action.MAIN"></action>
+				<category
+					android:name="android.intent.category.NORMAL">
+				</category>
+			</intent-filter>
+		</activity>
+		
+                                
+
+                                <activity android:name=".Update_Specialization">
+			<intent-filter>
+			
+			    	<action android:name="android.intent.action.MAIN"></action>
+				<category
+					android:name="android.intent.category.NORMAL">
+				</category>
+			</intent-filter>
+		</activity>
+		
+                                
+
+                                <activity android:name=".Update_Sp_Experience">
+			<intent-filter>
+			
+			    	<action android:name="android.intent.action.MAIN"></action>
+				<category
+					android:name="android.intent.category.NORMAL">
+				</category>
+			</intent-filter>
+		</activity>
+		
+                                
+                                <activity android:name=".Update_Services">
+			<intent-filter>
+			
+			    	<action android:name="android.intent.action.MAIN"></action>
+				<category
+					android:name="android.intent.category.NORMAL">
+				</category>
+			</intent-filter>
+		</activity>
+		
+                                
+                                <activity android:name=".Update_Sv_Experience">
+			<intent-filter>
+			
+			    	<action android:name="android.intent.action.MAIN"></action>
+				<category
+					android:name="android.intent.category.NORMAL">
+				</category>
+			</intent-filter>
+		</activity>
+		
+
+                                <activity android:name=".Update_Website">
+			<intent-filter>
+			
+			    	<action android:name="android.intent.action.MAIN"></action>
+				<category
+					android:name="android.intent.category.NORMAL">
+				</category>
+			</intent-filter>
+		</activity>
+		
+                                
+                                <activity android:name=".Update_Facebook">
+			<intent-filter>
+			
+			    	<action android:name="android.intent.action.MAIN"></action>
+				<category
+					android:name="android.intent.category.NORMAL">
+				</category>
+			</intent-filter>
+		</activity>
+		
+                                
+                                <activity android:name=".Update_Twitter">
+			<intent-filter>
+			
+			    	<action android:name="android.intent.action.MAIN"></action>
+				<category
+					android:name="android.intent.category.NORMAL">
+				</category>
+			</intent-filter>
+		</activity>
+            
+            
+                                <activity android:name=".Update_LinkedIn">
+			<intent-filter>
+			
+			    	<action android:name="android.intent.action.MAIN"></action>
+				<category
+					android:name="android.intent.category.NORMAL">
+				</category>
+			</intent-filter>
+		</activity>
+            
+                                            
+            
+            
+                                            
+                                            
+            
+            
+            
+            
+                                
+            
+                                
+            <!-- end of update profile  -->                    
+                                
+                           <activity android:name="www.commice.com.SettingsActivity">
+			<intent-filter>
+			
+			    	<action android:name="android.intent.action.MAIN"></action>
+				<category
+					android:name="android.intent.category.NORMAL">
+				</category>
+			</intent-filter>
+		</activity>
+                            
+
+                           <activity android:name="www.commice.com.No_Internet">
+			<intent-filter>
+			
+			    	<action android:name="android.intent.action.MAIN"></action>
+				<category
+					android:name="android.intent.category.NORMAL">
+				</category>
+			</intent-filter>
+		</activity>
+                            
+                           
+                           
+                           
+    </application>
+
+</manifest>
